@@ -3,15 +3,15 @@ import './App.css';
 import Showitems from './showitems';
 
 const App = () => {
-
+  //inputitem is a variable to store each entry in string format
   const [inputitem, setinputitemsl] = useState("");
-
+  //itemlist is a array which stores the items
   const [itemlist, setitemlist] =useState([]);
-
+  //function which store each entry in inputitem
   const items = (event) =>{
     setinputitemsl(event.target.value);
   };
-
+  //function which stores inputitem in itemlist array
   const assignitem = () =>{
     setitemlist((prevdata) =>
     {
@@ -19,7 +19,7 @@ const App = () => {
     })
     setinputitemsl("");
   };
-
+  //function which delete items from itemlist array
   const delitem = (id) =>{
     setitemlist((prevdata) => {
       return prevdata.filter((arritem,index)=>{
